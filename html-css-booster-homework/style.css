@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  /* primary */
+  --Very-Dark-Blue: hsl(243, 87%, 12%);
+  --Desaturated-Blue: hsl(238, 22%, 44%);
+
+  /* Accent */
+  --Bright-Blue: hsl(224, 93%, 58%);
+  --Moderate-Cyan: hsl(170, 45%, 43%);
+
+  /* Neutral */
+  --Light-Grayish-Blue: hsl(240, 75%, 98%);
+  --Light-Gray: hsl(0, 0%, 75%);
+
+  /* Typography */
+
+  /* Headings, Call-to-actions, Header Navigation */
+  --font-family-Raleway: "Raleway", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Body */
+  --font-family-open-sans: "Open Sans", sans-serif;
+  --font-weight-body: 400;
+}
+/* CSS RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-family-open-sans);
+  font-weight: var(--font-weight-body);
+}
+p {
+  font-size: 16px;
+}
+h1 {
+  font-family: var(--font-family-Raleway);
+  font-weight: var(--font-weight-bold);
+}
+form input[type="button"] {
+  background-color: var(--Bright-Blue);
+  border: none;
+  color: white;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header section {
+  width: 30rem;
+  margin: 4rem;
+}
+header section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  line-height: 2.9rem;
+}
+header section form {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+header section form input[type="email"] {
+  width: 18rem;
+  height: 2.5rem;
+}
+header section form input[type="button"] {
+  width: 11rem;
+  margin-left: 0.75rem;
+}
+header img {
+  width: 40rem;
+}
+main > div {
+  background-image: url(./images/bg-curve-desktop.svg);
+  background-size: 100% 100%;
+  padding: 3rem;
+  margin-top: 10rem;
+}
+.main-section-1 {
+  background: url(./images/bg-curve-desktop.svg) no-repeat center;
+  background-size: cover;
+  -o-background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 5rem;
+  margin-top: -2rem;
+  padding-bottom: 6rem;
+}
+main .main-section-1 section {
+  width: 45rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 4rem;
+}
+main .main-section-1 section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+main .main-section-1 section p {
+  width: 31rem;
+  margin-bottom: 0.85rem;
+}
+main .main-section-1 section a {
+  color: var(--Moderate-Cyan);
+}
+.main-section-1 section article {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 2px 10px 1px lightgray;
+  width: 22rem;
+  height: 13rem;
+  padding: 1.5rem;
+  background-color: white;
+  margin-top: 4rem;
+}
+.main-section-1 section article > img {
+  width: 1rem;
+  height: 1rem;
+  margin-bottom: 0.75rem;
+}
+.main-section-1 section article p {
+  font-size: small;
+  width: 17rem;
+}
+.main-section-1 section .avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-top: 0.65rem;
+}
+.main-section-1 section article .name {
+  position: relative;
+  top: -2.8rem;
+  left: 2.5rem;
+  font-size: 12px;
+  font-weight: 700;
+}
+.main-section-1 section article .job {
+  font-size: 10px;
+  position: relative;
+  top: -2.7rem;
+  left: 2.5rem;
+}
+.picture1 {
+  width: 30rem;
+  height: 25rem;
+}
+.main-section-2 {
+  background-color: var(--Desaturated-Blue);
+  padding: 5cqmax;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main-section-2 h1 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+.main-section-2 p {
+  color: rgb(206, 206, 206);
+  width: 31rem;
+}
+.main-section-2 section form {
+  display: flex;
+  flex-direction: column;
+}
+.main-section-2 section form input[type="email"] {
+  width: 25rem;
+  height: 2.5rem;
+  margin-bottom: 0.95rem;
+}
+.main-section-2 section form input[type="button"] {
+  width: 10rem;
+  height: 2.5rem;
+}
+footer {
+  padding: 8rem 10rem 4rem 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--Very-Dark-Blue);
+  color: var(--Light-Gray);
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  margin: 1rem;
+}
+#logos {
+  top: -4rem;
+  position: relative;
+}
+#Contact {
+  display: flex;
+}
+#Contact li {
+  color: #fff !important;
+  border: solid var(--Light-Gray) 1px;
+  border-radius: 50%;
+  width: 1.85rem;
+  height: 1.85rem;
+  align-content: center;
+  text-align: center;
+  font-size: 0.5rem;
+}
+#Contact li svg {
+}
