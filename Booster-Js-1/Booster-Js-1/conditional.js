@@ -13,6 +13,19 @@ let yourRole = 'mentor';
 
 //your code here//
 
+if(yourRole==="mentor"){
+    console.log(`Hi ${yourName}, you are a mentor`);  
+}
+else if(yourRole==="student"){
+    console.log(`Hi ${yourName}, you are a student`);  
+}
+else if(yourRole==="mentor"){
+    console.log(`Hi ${yourName}, you are a teacher`);  
+}
+else{
+    console.log(`Hi ${yourName}, you should join APS`);  
+
+}
 
 ///
 
