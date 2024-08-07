@@ -10,10 +10,7 @@
 
 let story =
   "I like dogs. One day I went to the park and I saw 10 dogs. It was a great day.";
-story.replaceAll("dogs", "cats");
-story.replace("10", "100000");
-story.replaceAll("day", "night");
-story.replace("great", "brilliant");
+  
 let result =story.replaceAll("dogs", "cats").replace("10", "100000").replaceAll("day", "night").replace("great", "brilliant");
   /* =========================
  DO NOT CHANGE BELOW CODES
