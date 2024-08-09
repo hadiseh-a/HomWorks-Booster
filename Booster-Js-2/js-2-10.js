@@ -1,16 +1,15 @@
 /** @format */ // There are errors in this code, can you fix it to pass the tests?
 
 function trimWord(text) {
-  return textTrim();
+  return text.trim();
 }
 
 function getWordLength(text) {
-  return "word".length();
+  return text.length;
 }
 
 function multiply(a, b, c) {
-  a * b * c;
-  return;
+  return a * b * c;
 }
 
 ///////////

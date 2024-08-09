@@ -10,21 +10,21 @@
 
 // the function should return true if num was negative otherwise return false
 function isNegative(num) {
-  return;
+  return num < 0;
 }
 
 // the function should return true if num wwas between 5 and 10 otherwise return false
 function isBetween5and10(num) {
-  return;
+  return num <= 10 && num> 5;
 }
 
 // check the characters if they are less than 10
 function isShortName(name) {
-  return;
+  return name.length < 10;
 }
 
 function startsWithD(name) {
-  return;
+  return name[0]=="d"|| name[0]=="D";
 }
 /* 
   DO NOT EDIT BELOW THIS LINE
