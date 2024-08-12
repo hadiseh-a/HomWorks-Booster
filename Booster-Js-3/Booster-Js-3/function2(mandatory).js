@@ -10,8 +10,9 @@
  *
  *
  */
-function tidyUpString(strArr) {}
-
+function tidyUpString(strArr) {
+  return strArr.map((str) => str.trim().replace("/", "").toLowerCase());
+}
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
 - is a number
@@ -20,7 +21,9 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+  return typeof num === "number" && num % 2 == 0 && num <= 100;
+}
 
 /* 
 Write a function that returns a copy of the given array "arr"(first parameter of the function)
@@ -28,7 +31,11 @@ but the element at the given index(second parameter of the function) should be r
 The function must NOT change the original array, arr.
 */
 
-function remove(arr, index) {}
+function remove(arr, index) {
+  copyArr = arr.map((x) => x);
+  copyArr.splice(index, 1);
+  return copyArr;
+}
 
 /*
 Write a function that:
@@ -37,8 +44,15 @@ Write a function that:
 - the decimal numbers must be rounded to 2 decimal places
 - numbers greater 100 must be replaced with 100 (e.g. 135 => '100%')
 */
-function formatPercentage(arr) {}
-
+function formatPercentage(arr) {
+  return arr.map((num) => {
+    if (num < 100 && Number.isInteger(num)) {
+      return num + "%";
+    } else if (num < 100) {
+      return num.toFixed(2) + "%";
+    } else return "100%";
+  });
+}
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, actual, expected) {
@@ -52,7 +66,7 @@ function test(test_name, actual, expected) {
   }
 
   if (isEqual) {
-    status = 'PASSED';
+    status = "PASSED";
   } else {
     status = `FAILED: expected: ${expected} but your function returned: ${actual}`;
   }
@@ -73,35 +87,35 @@ function arraysEqual(a, b) {
 }
 
 test(
-  'tidyUpString function works - case 1',
-  tidyUpString(['/Daniel ', 'irina ', ' Gordon', 'ashleigh ']),
-  ['daniel', 'irina', 'gordon', 'ashleigh']
+  "tidyUpString function works - case 1",
+  tidyUpString(["/Daniel ", "irina ", " Gordon", "ashleigh "]),
+  ["daniel", "irina", "gordon", "ashleigh"]
 );
 test(
-  'tidyUpString function works - case 2',
-  tidyUpString([' /Sanyia ', ' Michael ', 'AnTHonY ', '   Tim   ']),
-  ['sanyia', 'michael', 'anthony', 'tim']
+  "tidyUpString function works - case 2",
+  tidyUpString([" /Sanyia ", " Michael ", "AnTHonY ", "   Tim   "]),
+  ["sanyia", "michael", "anthony", "tim"]
 );
 
-test('validate function works - case 1', validate(10), true);
-test('validate function works - case 2', validate(18), true);
-test('validate function works - case 3', validate(17), false);
-test('validate function works - case 4', validate('Ten'), false);
-test('validate function works - case 5', validate(108), false);
+test("validate function works - case 1", validate(10), true);
+test("validate function works - case 2", validate(18), true);
+test("validate function works - case 3", validate(17), false);
+test("validate function works - case 4", validate("Ten"), false);
+test("validate function works - case 5", validate(108), false);
 
 test(
-  'remove function works - case 1',
+  "remove function works - case 1",
   remove([10, 293, 292, 176, 29], 3),
   [10, 293, 292, 29]
 );
 test(
-  'remove function works - case 2',
-  remove(['a', 'b', 'c', 'd', 'e', 'f', 'g'], 6),
-  ['a', 'b', 'c', 'd', 'e', 'f']
+  "remove function works - case 2",
+  remove(["a", "b", "c", "d", "e", "f", "g"], 6),
+  ["a", "b", "c", "d", "e", "f"]
 );
 
 test(
-  'formatPercentage function works - case 1',
+  "formatPercentage function works - case 1",
   formatPercentage([23, 18.103, 187.2, 0.372]),
-  ['23%', '18.10%', '100%', '0.37%']
+  ["23%", "18.10%", "100%", "0.37%"]
 );

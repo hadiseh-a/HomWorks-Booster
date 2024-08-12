@@ -4,12 +4,14 @@
 let numbers = [0.1, 0.2, 0.3, 0.4, 0.5];
 
 const add100 = (num) => {
- 
+  return num * 100;
 };
 
-let solutionOne = ;
-let solutionTwo = ;
+let solutionOne = numbers.map((num) => add100(num));
+let solutionTwo = numbers.map((num) => num * 100);
 
-let solutionThree = ;
+let solutionThree = numbers.map(function (num) {
+  return num * 100;
+});
 
 console.log(solutionOne, solutionTwo, solutionThree);
