@@ -10,7 +10,14 @@ An array containing all three tips (one for each bill).
 An array containing all three final paid amounts (bill + tip).
 */
 
-function calculateTip(bill) {}
-
-let tips;
-let totalPaid;
+function calculateTip(bill) {
+  if (bill <= 50) return bill / 5;
+  else if (bill <= 200) return (bill / 20) * 3;
+  else if (bill > 200) return bill / 10;
+}
+let bills = [124, 48, 268];
+let tips = bills.map((number) => calculateTip(number));
+let totalPaid = tips.map((tip) => bills[tips.indexOf(tip)] + tip);
+console.log(bills);
+console.log(tips);
+console.log(totalPaid);

@@ -16,7 +16,11 @@
  */
 
 // `getAllFrequencies` goes here
-
+function getAllFrequencies() {
+  let array = [];
+  for (let i = 87; i < 109; i++) array.push(i);
+  return array;
+}
 /**
  * Next, let's write a function that gives us only the frequencies that are radio stations.
  * Call this function `getStations`.
@@ -29,6 +33,9 @@
 
 //
 // `getStations` goes here
+function getStations() {
+  return getAllFrequencies().filter((frequency) => isRadioStation(frequency));
+}
 /* ======= TESTS - DO NOT MODIFY ======= */
 
 function getAvailableStations() {
@@ -90,7 +97,7 @@ function areDeeplyEqual(obj1, obj2) {
   );
 }
 
-test('getAllFrequencies() returns all frequencies between 87 and 108', function () {
+test("getAllFrequencies() returns all frequencies between 87 and 108", function () {
   const frequencies = getAllFrequencies();
   console.log(frequencies);
   areDeeplyEqual(
@@ -102,7 +109,7 @@ test('getAllFrequencies() returns all frequencies between 87 and 108', function 
   );
 });
 
-test('getStations() returns all the available stations', () => {
+test("getStations() returns all the available stations", () => {
   const stations = getStations();
   const available = getAvailableStations();
   areDeeplyEqual(stations, available);
