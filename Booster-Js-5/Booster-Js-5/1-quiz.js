@@ -19,12 +19,26 @@
 
 //1
 
-const MockTask=[];
+const inputEle = document.querySelector("#taskInput");
+const btnEle = document.querySelector("#addTaskBtn");
+const taskList = document.querySelector("#taskList");
+
+const MockTask = [];
 
 //2
 
-function fetchTasks(){
-    return new Promise(()=>{
-        setTimeout(()=>.,1000)
-    })
+function fetchTasks() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+    }, 1000);
+  });
 }
+
+//3
+
+function renderTasks(tasks) {}
+
+//4
+
+function addTask(task) {}
+btnEle.addEventListener("submit", addTask);
