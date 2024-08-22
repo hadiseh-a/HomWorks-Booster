@@ -22,6 +22,7 @@
 const inputEle = document.querySelector("#taskInput");
 const btnEle = document.querySelector("#addTaskBtn");
 const taskList = document.querySelector("#taskList");
+const form = document.querySelector("#form");
 
 const MockTask = ["do the dishes", "coding", "working"];
 
@@ -38,6 +39,7 @@ function fetchTasks() {
 //3
 
 function renderTasks(tasks) {
+  taskList.innerHTML = "";
   tasks.forEach((element) => {
     const li = document.createElement("li");
     taskList.append(li);
@@ -52,12 +54,13 @@ function addTask(task) {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(MockTask);
+      console.log(task);
     }, 500);
   });
 }
-btnEle.addEventListener("submit", (task) => {
+form.addEventListener("submit", (task) => {
   task.preventDefault();
-  addTask(task).then((tasks) => renderTasks(tasks));
+  addTask(task.target[0].value).then((tasks) => renderTasks(tasks));
 });
 
 fetchTasks().then((tasks) => renderTasks(tasks));
